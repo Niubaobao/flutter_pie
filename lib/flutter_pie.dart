@@ -1,3 +1,3 @@
 library flutter_pie;
 
-export 'src/pie.dart';
+export 'src/flutter_pie.dart';
