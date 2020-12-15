@@ -6,7 +6,6 @@ void main() {
 }
 
 class MyApp extends StatelessWidget {
-  
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -19,7 +18,6 @@ class MyApp extends StatelessWidget {
 class MyHomePage extends StatefulWidget {
   MyHomePage({Key key, this.title}) : super(key: key);
 
-
   final String title;
 
   @override
@@ -27,8 +25,7 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-
-   Map<String, double> dataMap = {
+  Map<String, double> dataMap = {
     "Flutter": 5,
     "React": 3,
     "Xamarin": 2,
@@ -37,19 +34,20 @@ class _MyHomePageState extends State<MyHomePage> {
 
   @override
   Widget build(BuildContext context) {
-    
     return Scaffold(
-      appBar: AppBar(       
+      appBar: AppBar(
         title: Text(widget.title),
       ),
-      body: Center(        
+      body: Container(
         child: Column(
           children: <Widget>[
-            FlutterPie(dataMap:dataMap)
-          ],          
+            FlutterPie(
+              dataMap: dataMap,
+              chartRadius: 200,
+            ),
+          ],
         ),
       ),
-
     );
   }
 }
